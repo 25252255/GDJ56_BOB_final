@@ -38,8 +38,6 @@ public class SubController {
 		Map<String, Object> param=new HashMap();
 		param.put("id", memberId);
 		param.put("choice", choice);
-		System.out.println(memberId);
-		System.out.println(choice);
 		
 		int result=service.insertSub(param);
 		
