@@ -39,7 +39,7 @@ public class CenterController {
 		mv.addObject("list", list);
 		
 		int totalData=service.selectNoticeCount();
-		mv.addObject("pageBar", AjaxPageBar.getPage(cPage, numPerpage, totalData, "noticeList"));
+		mv.addObject("pageBar", AjaxPageBar.getPage(cPage, numPerpage, totalData));
 		
 		int totalPage=(int)Math.ceil((double)totalData/numPerpage);
 		mv.addObject("totalPage", totalPage);
@@ -62,7 +62,7 @@ public class CenterController {
 		mv.addObject("list", list);
 		
 		int totalData=service.selectNoticeCount(param);
-		mv.addObject("pageBar", AjaxPageBar.getPage(cPage, numPerpage, totalData, "noticeList"));
+		mv.addObject("pageBar", AjaxPageBar.getPage(cPage, numPerpage, totalData));
 		
 		int totalPage=(int)Math.ceil((double)totalData/numPerpage);
 		mv.addObject("totalPage", totalPage);
@@ -110,7 +110,7 @@ public class CenterController {
 		mv.addObject("list", list);
 		
 		int totalData=service.selectCqCount();
-		mv.addObject("pageBar", AjaxPageBar.getPage(cPage, numPerpage, totalData, "clientQnaList"));
+		mv.addObject("pageBar", AjaxPageBar.getPage(cPage, numPerpage, totalData));
 		
 		int totalPage=(int)Math.ceil((double)totalData/numPerpage);
 		mv.addObject("totalPage", totalPage);
@@ -133,7 +133,7 @@ public class CenterController {
 		mv.addObject("list", list);
 		
 		int totalData=service.selectCqCount(param);
-		mv.addObject("pageBar", AjaxPageBar.getPage(cPage, numPerpage, totalData, "clientQnaList"));
+		mv.addObject("pageBar", AjaxPageBar.getPage(cPage, numPerpage, totalData));
 
 		int totalPage=(int)Math.ceil((double)totalData/numPerpage);
 		mv.addObject("totalPage", totalPage);
@@ -176,7 +176,7 @@ public class CenterController {
 	public String numChange(int cPage){
 		int numPerpage=5;
 		int totalData=service.selectNoticeCount();
-		String pageBar=AjaxPageBar.getPage(cPage, numPerpage, totalData, "noticeList");
+		String pageBar=AjaxPageBar.getPage(cPage, numPerpage, totalData);
 		return pageBar;
 	}
 

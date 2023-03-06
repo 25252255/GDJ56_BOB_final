@@ -2,7 +2,7 @@ package com.today.bab.common;
 
 public class AjaxPageBar {
 	
-	public static String getPage(int cPage, int numPerpage, int totalData, String url) {
+	public static String getPage(int cPage, int numPerpage, int totalData) {
 		String pageBar="";
 		int totalPage=(int)Math.ceil((double)totalData/numPerpage);
 		int pageBarSize=3;
