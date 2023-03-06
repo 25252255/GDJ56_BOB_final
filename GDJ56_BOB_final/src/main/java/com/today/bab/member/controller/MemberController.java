@@ -136,7 +136,7 @@ public class MemberController {
 	
 	@ResponseBody
 	@RequestMapping(value="/emailCheck", method=RequestMethod.GET)
-	public String emailCheck(String email) throws Exception {
+	public int emailCheck(String email) throws Exception {
 		
 		//숫자 6자리로 구성된 인증번호 생성
 		Random r=new Random();
@@ -162,10 +162,7 @@ public class MemberController {
             e.printStackTrace();
         }
 		
-		//인증번호를 String으로 형변환
-		String num=Integer.toString(checkNum);
-		
-		return num;
+		return checkNum;
 	}
 	
 	@RequestMapping("/enrollMemberEnd")
